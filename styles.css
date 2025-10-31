@@ -1,0 +1,408 @@
+/* ---------------------------------------------------
+   CONFIGURACIÓN GENERAL
+   --------------------------------------------------- */
+
+/* Importar tipografías desde Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@400;600;700&family=Open+Sans:wght@400;600&display=swap');
+
+/* Paleta de colores */
+:root {
+  --dark-primary: #388E3C;
+  --light-primary: #C8E6C9;
+  --primary: #4CAF50;
+  --accent: #448AFF;
+  --text-icons: #FFFFFF;
+  --primary-text: #212121;
+  --secondary-text: #757575;
+  --divider: #BDBDBD;
+}
+
+/* Reset básico */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Fuente y colores base */
+body {
+  font-family: 'Open Sans', Arial, sans-serif;
+  color: var(--primary-text);
+  background-color: white;
+  line-height: 1.6;
+}
+
+/* ---------------------------------------------------
+   ENCABEZADO Y NAVEGACIÓN
+   --------------------------------------------------- */
+header {
+  background-color: var(--dark-primary);
+  color: var(--text-icons);
+  text-align: center;
+  padding: 30px 15px;
+}
+
+header h1 {
+  font-family: 'Manrope', sans-serif;
+  font-size: 2em;
+  margin-bottom: 5px;
+}
+
+header p {
+  font-size: 1em;
+  color: var(--light-primary);
+}
+
+nav {
+  background-color: var(--primary);
+  padding: 10px 0;
+}
+
+nav.navegacion-principal ul{
+    gap: 120px;
+}
+
+
+nav ul {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 50px;
+}
+
+nav li a {
+  color: var(--text-icons);
+  text-decoration: none;
+  font-weight: 600;
+  transition: color 0.3s ease;
+  text-align: center;
+}
+
+nav li a:hover {
+  color: var(--accent);
+}
+
+.tipos h2, h3{
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+.tipos article h3{
+    text-align: left;
+}
+
+
+/* ---------------------------------------------------
+   SECCIONES GENERALES
+   --------------------------------------------------- */
+section {
+  padding: 40px 20px;
+  max-width: 1000px;
+  margin: auto;
+  background-color: #f9f9f9;
+  border-radius: 12px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+  margin-top: 30px;
+}
+
+section#inicio{
+    background-color: white;
+    box-shadow: none;
+}
+
+section h2 {
+  font-family: 'Manrope', sans-serif;
+  color: var(--primary-text);
+  border-bottom: 2px solid var(--divider);
+  padding-bottom: 10px;
+  margin-bottom: 20px;
+}
+
+section#carteras h2, section#recursos h2, section#carteras h3{
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+section#carteras p{
+    text-align: left;
+}
+
+/* Estilo para contenedores*/
+
+.container {
+  display: flex;              /* Los div hijos se colocan en una fila */
+  justify-content: space-between; /* Espacio entre ellos */
+  gap: 20px;                 /* Espacio entre cajas */
+  margin-bottom: 10px;
+}
+
+.caja {
+  background-color: white;
+  width: 50%;
+  text-align: left;
+  padding: 20px;
+}
+.caja h2, .caja p, .caja li, .caja a{
+    margin-left: 10px
+}
+.caja-definiciones {
+  background-color: white;
+  width: 50%;
+  text-align: left;
+  padding: 20px;
+  margin-top: 5px;
+  margin-left: 5px;
+  margin-right: 5px;
+  margin-bottom: 5px;
+  border-radius: 20px;
+  border: 1px solid var(--divider);
+}
+
+.caja-definiciones-cartera {
+  background-color: white;
+  width: 50%;
+  padding: 20px;
+  margin-top: 5px;
+  margin-left: 5px;
+  margin-right: 5px;
+  margin-bottom: 5px;
+  border-radius: 20px;
+  border: 1px solid var(--divider);
+}
+
+
+.caja-definiciones h3, .caja-definiciones p, .caja-definiciones li, .caja-definicion h3, .caja-definicion p, .caja-definicion li  {
+  margin-left: 20px;
+  text-align: left;
+  padding: 3px;
+}
+
+.caja-definiciones h3, .caja-definicion h3, .caja-definicion h2 {
+    margin-top: 10px;
+}
+
+.caja-definiciones p, .caja-definicion p, .caja-definicion h2 {
+    margin-top: 5px;
+    margin-bottom: 15px;
+    margin-right: 5px;
+    padding: 3px;
+}
+.caja-definiciones .icono, .caja-definicion .icono{
+    margin-left: 20px;
+    margin-bottom: 1px;
+    margin-top: 20px;
+}
+
+.caja-definiciones .icono-center {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+
+.caja-definicion {
+  background-color: white;
+  text-align: left;
+  padding: 20x;
+  margin-top: 10px;
+  margin-left: 5px;
+  margin-right: 5px;
+  margin-bottom: 5px;
+  border-radius: 20px;
+  border: 1px solid var(--divider);
+}
+
+.caja-definiciones-cartera{
+    text-align: center;
+}
+
+#cabecera h2 {
+    text-align: center;
+    margin-bottom: 15px;
+}
+
+
+/* Estilos específicos para la sección de inicio */
+#texto-inicio h2{
+    font-size: 2.5rem;
+}
+
+#texto-inicio p{
+    font-size: 1.2rem;
+    margin-top: 30px;
+    margin-bottom: 30px;
+}
+
+#texto-inicio .boton{
+    font-size: 1.1rem;
+    padding: 10px 25px;
+}
+
+/* ---------------------------------------------------
+   ENLACES DENTRO DE SECCIONES
+   --------------------------------------------------- */
+
+/* Estado normal del id=recursos (por defecto) */
+section#recursos  li a {
+  color: var(--accent);            /* Azul de acento */
+  text-decoration: none;
+  font-weight: 600;
+  transition: color 0.3s ease;
+}
+
+/* Cuando el ratón pasa por encima */
+section#recursos a:hover {
+  color: var(--primary);           /* Verde principal */
+  text-decoration: underline;
+}
+
+/* Cuando el enlace del id=recursos ha sido visitado */
+section#recursos a:visited {
+  color: #D17A49;      /* Naranja grisáceo */
+}
+
+/* Mientras el enlace del id=recursos está siendo clicado */
+section#recursos  li a:active {
+  color: #ff5722;                  /* Naranja intenso (destaca al hacer clic) */
+}
+
+section#checklist h2, section#conclusion h2{
+    text-align: center;
+}
+
+article h3 {
+  color: var(--primary);
+  margin-bottom: 10px;
+}
+
+p, li {
+  color: var(--secondary-text);
+  font-size: 1rem;
+}
+
+/* ---------------------------------------------------
+   IMÁGENES Y MULTIMEDIA
+   --------------------------------------------------- */
+figure {
+  text-align: center;
+  margin: 20px 0;
+}
+
+figure img, video {
+  max-width: 100%;
+  border-radius: 10px;
+}
+
+figcaption {
+  font-size: 0.8rem;
+  color: var(--secondary-text);
+  margin-top: 5px;
+}
+
+img.icono, img.icono-center {
+  width: 40x;
+  height: 40px;
+}
+
+
+
+/* ---------------------------------------------------
+   TABLAS Y LISTAS
+   --------------------------------------------------- */
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 20px;
+}
+
+th, td {
+  padding: 10px;
+  text-align: center;
+}
+
+th {
+  background-color: var(--light-primary);
+  color: var(--dark-primary);
+}
+
+/* Bordes redondeados arriba */
+th:first-child {
+  border-top-left-radius: 12px;
+}
+th:last-child {
+  border-top-right-radius: 12px;
+}
+
+tr:nth-child(even) {
+  background-color: #f2f2f2;
+}
+
+/* Animación sutil al pasar el ratón */
+
+tr:hover {
+  background-color: #e8f5e9;
+  transition: background-color 0.3s ease;
+}
+
+ul, ol{
+    margin-left: 30px;
+    margin-bottom: 15px;
+    margin-top: 10px;
+}
+
+/* ---------------------------------------------------
+   PIE DE PÁGINA
+   --------------------------------------------------- */
+footer {
+  background-color: var(--dark-primary);
+  color: var(--text-icons);
+  text-align: center;
+  padding: 20px 10px;
+  margin-top: 40px;
+  font-size: 0.9rem;
+}
+
+footer p{
+    color: var(--text-icons);
+}
+
+/* ---------------------------------------------------
+   DETALLES VISUALES Y BOTONES
+   --------------------------------------------------- */
+a {
+  color: var(--accent);
+}
+
+ul a:hover {
+  text-decoration: underline;
+}
+
+.boton{
+    background-color: var(--primary);
+    color: var(--text-icons);                 
+    padding: 10px 20px;           
+    text-decoration: none;        
+    border-radius: 15px;           
+    display: inline-block;        
+    font-weight: bold;            
+    transition: background-color 0.3s;
+}
+
+.boton:hover{
+    background-color: var(--accent);
+}
+
+/* ---------------------------------------------------
+   RESPONSIVE (boceto inicial)
+   --------------------------------------------------- */
+@media (max-width: 768px) {
+  nav ul {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  section {
+    padding: 20px 10px;
+  }
+}
