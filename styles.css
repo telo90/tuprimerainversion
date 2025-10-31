@@ -128,7 +128,7 @@ section#carteras p{
     text-align: left;
 }
 
-/* Estilo para contenedores*/
+/* Estilo para contenedores */
 
 .container {
   display: flex;              /* Los div hijos se colocan en una fila */
@@ -224,6 +224,7 @@ section#carteras p{
 
 
 /* Estilos específicos para la sección de inicio */
+
 #texto-inicio h2{
     font-size: 2.5rem;
 }
@@ -300,11 +301,15 @@ figcaption {
   margin-top: 5px;
 }
 
+img.logo{
+  width: 80px;
+  height: 80px;
+}
+
 img.icono, img.icono-center {
   width: 40x;
   height: 40px;
 }
-
 
 
 /* ---------------------------------------------------
@@ -352,22 +357,6 @@ ul, ol{
 }
 
 /* ---------------------------------------------------
-   PIE DE PÁGINA
-   --------------------------------------------------- */
-footer {
-  background-color: var(--dark-primary);
-  color: var(--text-icons);
-  text-align: center;
-  padding: 20px 10px;
-  margin-top: 40px;
-  font-size: 0.9rem;
-}
-
-footer p{
-    color: var(--text-icons);
-}
-
-/* ---------------------------------------------------
    DETALLES VISUALES Y BOTONES
    --------------------------------------------------- */
 a {
@@ -386,12 +375,30 @@ ul a:hover {
     border-radius: 15px;           
     display: inline-block;        
     font-weight: bold;            
-    transition: background-color 0.3s;
+    transition: background-color 0.3s ease-in-out;
 }
 
 .boton:hover{
     background-color: var(--accent);
 }
+
+/* ---------------------------------------------------
+   PIE DE PÁGINA
+   --------------------------------------------------- */
+footer {
+  background-color: var(--dark-primary);
+  color: var(--text-icons);
+  text-align: center;
+  padding: 20px 10px;
+  margin-top: 40px;
+  font-size: 0.9rem;
+}
+
+footer p{
+    color: var(--text-icons);
+}
+
+
 
 /* ---------------------------------------------------
    RESPONSIVE (boceto inicial)
