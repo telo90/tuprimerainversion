@@ -159,9 +159,40 @@
             </ol>
         </div>
   </section>
+  <!-- FORMULARIO PARA CONSEJOS DE INVERSIÓN-->
+
+<section id="formulario">
+    <h2 id="titulo-form">Recibe el consejo de nuestros asesores:</h2>
+    <form>
+        <label for="nombre">Nombre completo:</label>
+        <input type="text" id="nombre" name="nombre" required placeholder="mínimo 3 carácteres">
+        <br>
+        <label for="email">Correo electrónico:</label>
+        <input type="email" id="email" name="email" required placeholder="usuario@ejemplo.es">
+        <br>
+        <label for="telefono">Teléfono (opcional):</label>
+        <input type="tel" id="telefono" name="telefono" pattern="[0-9]{10}">
+        <br>
+        <label for="monto">Disponible para invertir (€):</label>
+        <select>
+            <option value="menos_1000">Menos de 1,000€</option>
+            <option value="1000_5000">1,000€ - 5,000€</option>
+            <option value="5000_20000">5,000€ - 20,000€</option>
+            <option value="mas_20000">Más de 20,000€</option>
+        </select>
+        <br>
+        <!-- Checkbox consentimiento obligatorio -->
+        <label>
+            <input type="checkbox" id="consentimiento" name="consentimiento" required>
+            Acepto recibir consejos por email y política de privacidad
+        </label>
+        <br>
+        <button type="submit">Enviar</button>
+    </form>
+</section>
   <!-- PIE DE PÁGINA -->
-  <footer>
+<footer>
     <p>© 2025 Tu Primera Inversión | Sitio educativo sin fines comerciales.</p>
-  </footer>
+</footer>
 </body>
 </html>
