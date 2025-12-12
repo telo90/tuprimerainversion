@@ -37,6 +37,8 @@ body {
    --------------------------------------------------- */
 header {
   background-color: var(--dark-primary);
+  /* Gradiente: usar la sintaxis correcta 'to right' o un ángulo. */
+  background: linear-gradient(to right, var(--primary), var(--dark-primary));
   color: var(--text-icons);
   text-align: center;
   padding: 30px 15px;
@@ -68,7 +70,6 @@ nav ul {
   display: flex;
   justify-content: center;
   flex-wrap: wrap;
-  gap: 50px;
 }
 
 nav li a {
@@ -128,7 +129,7 @@ section#carteras p{
     text-align: left;
 }
 
-/* Estilo para contenedores */
+/* Estilo para contenedores*/
 
 .container {
   display: flex;              /* Los div hijos se colocan en una fila */
@@ -217,6 +218,11 @@ section#carteras p{
     text-align: center;
 }
 
+.caja-definicion:hover, .caja-definiciones:hover, .caja-definiciones-cartera:hover{
+  transform: scale(1.05);
+  transition: transform 0.8s;
+}
+
 #cabecera h2 {
     text-align: center;
     margin-bottom: 15px;
@@ -224,7 +230,6 @@ section#carteras p{
 
 
 /* Estilos específicos para la sección de inicio */
-
 #texto-inicio h2{
     font-size: 2.5rem;
 }
@@ -312,6 +317,7 @@ img.icono, img.icono-center {
 }
 
 
+
 /* ---------------------------------------------------
    TABLAS Y LISTAS
    --------------------------------------------------- */
@@ -357,6 +363,22 @@ ul, ol{
 }
 
 /* ---------------------------------------------------
+   PIE DE PÁGINA
+   --------------------------------------------------- */
+footer {
+  background-color: var(--dark-primary);
+  color: var(--text-icons);
+  text-align: center;
+  padding: 20px 10px;
+  margin-top: 40px;
+  font-size: 0.9rem;
+}
+
+footer p{
+    color: var(--text-icons);
+}
+
+/* ---------------------------------------------------
    DETALLES VISUALES Y BOTONES
    --------------------------------------------------- */
 a {
@@ -375,7 +397,7 @@ ul a:hover {
     border-radius: 15px;           
     display: inline-block;        
     font-weight: bold;            
-    transition: background-color 0.3s ease-in-out;
+    transition: background-color 0.3s;
 }
 
 .boton:hover{
@@ -383,30 +405,13 @@ ul a:hover {
 }
 
 /* ---------------------------------------------------
-   PIE DE PÁGINA
-   --------------------------------------------------- */
-footer {
-  background-color: var(--dark-primary);
-  color: var(--text-icons);
-  text-align: center;
-  padding: 20px 10px;
-  margin-top: 40px;
-  font-size: 0.9rem;
-}
-
-footer p{
-    color: var(--text-icons);
-}
-
-
-
-/* ---------------------------------------------------
-   RESPONSIVE (boceto inicial)
+   RESPONSIVE
    --------------------------------------------------- */
 @media (max-width: 768px) {
   nav ul {
     flex-direction: column;
     gap: 10px;
+    text-align: center;
   }
 
   section {
