@@ -120,6 +120,42 @@
       </table>
   </section>
 
+  <!-- SECCIÓN CALCULADORA INTERÉS COMPUESTO -->
+  <section class="calculadora-compuesto">
+    <h2>🧮 Calculadora Interés Compuesto</h2>
+    
+    <div class="input-group">
+        <label for="capital">💰 Capital inicial (€):</label>
+        <input type="number" id="capital" min="0" step="0.01" placeholder="10000">
+    </div>
+    
+    <div class="input-group">
+        <label for="tasa">📈 Tasa anual (%):</label>
+        <input type="number" id="tasa" min="0" max="100" step="0.1" placeholder="5">
+    </div>
+    
+    <div class="input-group">
+        <label for="años">📅 Años:</label>
+        <input type="number" id="años" min="1" max="100" placeholder="10">
+    </div>
+    
+    <div class="input-group">
+        <label for="aportacion">💸 Aportación/mes (€):</label>
+        <input type="number" id="aportacion" min="0" step="0.01" placeholder="200">
+    </div>
+    
+    <div class="botones-calculo">
+        <button class="btn-calcular">Calcular</button>
+        <button class="btn-limpiar">Limpiar</button>
+    </div>
+    
+    <div id="resultado" class="resultado">
+        <div class="monto-final" id="montoFinal">€0</div>
+        <div class="ganancia" id="gananciaTotal">Ganancia: €0</div>
+        <div id="detalleAportaciones"></div>
+    </div>
+</section>
+
   <!-- SECCIÓN RECURSOS -->
   <section id="recursos">
     <h2>Recursos y herramientas para seguir aprendiendo</h2>
@@ -150,5 +186,8 @@
   <footer>
     <p>© 2025 Tu Primera Inversión | Sitio educativo sin fines comerciales.</p>
   </footer>
+
+  <!-- Llamamos al script.js -->
+  <script src="script.js"></script>
 </body>
 </html>

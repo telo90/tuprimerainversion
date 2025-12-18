@@ -487,6 +487,143 @@ input[type="checkbox"] {
   margin: 0;
 }
 
+/* CSS específico para la calculadora de interés compuesto */
+        .calculadora-compuesto {
+            max-width: 600px;
+            margin: 2rem auto;
+            padding: 2.5rem;
+            background: linear-gradient(135deg, #f9f9f9, var(--light-primary));
+            border-radius: 20px;
+            box-shadow: 0 8px 32px rgba(76, 175, 80, 0.15);
+            border: 1px solid var(--divider);
+        }
+
+        .calculadora-compuesto h2 {
+            font-family: 'Manrope', sans-serif;
+            color: var(--dark-primary);
+            text-align: center;
+            margin-bottom: 2rem;
+            font-size: 1.8rem;
+            border-bottom: 3px solid var(--primary);
+            padding-bottom: 1rem;
+        }
+
+        .input-group {
+            margin-bottom: 1.5rem;
+        }
+
+        .input-group label {
+            display: block;
+            margin-bottom: 0.5rem;
+            color: var(--primary-text);
+            font-weight: 600;
+            font-size: 0.95rem;
+        }
+
+        .input-group input {
+            width: 100%;
+            padding: 14px 16px;
+            border: 2px solid var(--divider);
+            border-radius: 12px;
+            font-size: 1.1rem;
+            font-family: 'Open Sans', sans-serif;
+            transition: all 0.3s ease;
+            background: white;
+        }
+
+        .input-group input:focus {
+            outline: none;
+            border-color: var(--primary);
+            box-shadow: 0 0 0 4px rgba(76, 175, 80, 0.1);
+            transform: translateY(-2px);
+        }
+
+        .botones-calculo {
+            display: flex;
+            gap: 1rem;
+            margin: 2rem 0;
+            justify-content: center;
+        }
+
+        .btn-calcular {
+            flex: 1;
+            padding: 14px 24px;
+            background: linear-gradient(135deg, var(--primary), var(--dark-primary));
+            color: var(--text-icons);
+            border: none;
+            border-radius: 15px;
+            font-size: 1.1rem;
+            font-weight: 600;
+            font-family: 'Manrope', sans-serif;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+
+        .btn-calcular:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 8px 25px rgba(76, 175, 80, 0.4);
+        }
+
+        .btn-limpiar {
+            flex: 1;
+            padding: 14px 24px;
+            background: var(--accent);
+            color: var(--text-icons);
+            border: none;
+            border-radius: 15px;
+            font-size: 1.1rem;
+            font-weight: 600;
+            font-family: 'Manrope', sans-serif;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+
+        .btn-limpiar:hover {
+            background: #1976D2;
+            transform: translateY(-3px);
+            box-shadow: 0 8px 25px rgba(68, 138, 255, 0.4);
+        }
+
+        .resultado {
+            background: white;
+            border: 2px solid var(--light-primary);
+            border-radius: 16px;
+            padding: 2rem;
+            margin-top: 2rem;
+            text-align: center;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.08);
+            transform: scale(0);
+            opacity: 0;
+            transition: all 0.5s ease;
+        }
+
+        .resultado.mostrar {
+            transform: scale(1);
+            opacity: 1;
+        }
+
+        .monto-final {
+            font-size: 2.5rem;
+            font-weight: 700;
+            color: var(--dark-primary);
+            margin: 1rem 0;
+            font-family: 'Manrope', sans-serif;
+        }
+
+        .ganancia {
+            font-size: 1.3rem;
+            color: var(--primary);
+            font-weight: 600;
+        }
+
+        .formula {
+            background: var(--light-primary);
+            padding: 1rem;
+            border-radius: 10px;
+            margin-top: 1.5rem;
+            font-size: 0.9rem;
+            color: var(--secondary-text);
+        }
 
 /* ---------------------------------------------------
    RESPONSIVE
@@ -501,4 +638,17 @@ input[type="checkbox"] {
   section {
     padding: 20px 10px;
   }
+  /* Ajustes para la calculadora de interés compuesto */
+  .calculadora-compuesto {
+                margin: 1rem;
+                padding: 2rem;
+            }
+            
+            .botones-calculo {
+                flex-direction: column;
+            }
+            
+            .monto-final {
+                font-size: 2rem;
+            }
 }
