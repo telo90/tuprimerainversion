@@ -1,17 +1,16 @@
 // el document.addEventListener se asegura de que el DOM esté completamente cargado
 document.addEventListener('DOMContentLoaded', function() {
-    console.log('✅ Script cargado correctamente');
     
     // FORMULARIO
     const formulario = document.querySelector('#formulario form');
     if (formulario) {
-        formulario.addEventListener('submit', function(e) {
-            e.preventDefault();
-            const mensaje = document.createElement('div');
-            mensaje.textContent = '¡Formulario enviado correctamente!';
-            mensaje.style.cssText = 'background: var(--light-primary); color: var(--dark-primary); padding: 15px; border-radius: 10px; margin-top: 15px; text-align: center; font-weight: 600;';
-            formulario.appendChild(mensaje);
-            setTimeout(() => mensaje.remove(), 4000);
+        formulario.addEventListener('submit', function(e) { // SE EJECUTA EL EVENTO AL ENVIAR EL FORMULARIO
+            e.preventDefault(); // PREVIENE EL COMPORTAMIENTO POR DEFECTO (RECARGAR LA PÁGINA)
+            const mensaje = document.createElement('div'); // CREA UN NUEVO ELEMENTO DIV
+            mensaje.textContent = '¡Formulario enviado correctamente!'; // MENSAJE A MOSTRAR
+            mensaje.style.cssText = 'background: var(--light-primary); color: var(--dark-primary); padding: 15px; border-radius: 10px; margin-top: 15px; text-align: center; font-weight: 600;'; // ESTILOS DEL MENSAJE
+            formulario.appendChild(mensaje); // AGREGA EL MENSAJE AL FORMULARIO
+            setTimeout(() => mensaje.remove(), 4000); // ELIMINA EL MENSAJE DESPUÉS DE 4 SEGUNDOS
         });
     }
 
@@ -42,7 +41,6 @@ document.addEventListener('DOMContentLoaded', function() {
 
 // FUNCIONES DE LA CALCULADORA
 function calcularInteresCompuesto() {
-    console.log('🚀 Iniciando cálculo...');
     
     const capitalEl = document.getElementById('capital');
     const tasaEl = document.getElementById('tasa');
